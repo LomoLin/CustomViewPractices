@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressPercentView">
+        <attr name="pv_strokeWidth" format="dimension"/>
+        <attr name="pv_strokeColor" format="color|reference"/>
+        <attr name="pv_progressColor" format="color|reference"/>
+        <attr name="pv_progressBgColor" format="color|reference"/>
+        <attr name="pv_textColor" format="color|reference"/>
+        <attr name="pv_textSize" format="dimension"/>
+        <attr name="pv_text" format="string|reference"/>
+        <attr name="pv_max" format="float"/>
+        <attr name="pv_current" format="float"/>
+        <attr name="pv_gap" format="dimension"/>
+    </declare-styleable>
+</resources>

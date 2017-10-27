@@ -1,11 +1,13 @@
 package com.lomo.demo;
 
 import android.animation.ObjectAnimator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RulerCallback {
+    private TextView tvScale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,5 +18,14 @@ public class MainActivity extends AppCompatActivity {
         animator.setDuration(2000);
         animator.setInterpolator(new AccelerateDecelerateInterpolator());
         animator.start();
+
+        RulerView rulerView = (RulerView) findViewById(R.id.ruler);
+        rulerView.setRulerCallback(this);
+        tvScale = (TextView) findViewById(R.id.tvScale);
+    }
+
+    @Override
+    public void onScaleChange(float scale) {
+        tvScale.setText((scale / 10) + "");
     }
 }

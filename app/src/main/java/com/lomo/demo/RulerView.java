@@ -135,7 +135,7 @@ public class RulerView extends View {
                 mVelocityTracker.computeCurrentVelocity(1000, mMaxVelocity);
                 int velocityX = (int) mVelocityTracker.getXVelocity();
                 if (Math.abs(velocityX) > mMinVelocity) {
-                    mOverScroller.fling(getScrollX(), 0, -velocityX, 0, mMinPosition, mMaxPosition, 0, 0);
+                    mOverScroller.fling(getScrollX(), 0, velocityX, 0, mMinPosition, mMaxPosition, 0, 0);
                     postInvalidate();
                 } else {
                     scrollBackToCurrentScale();

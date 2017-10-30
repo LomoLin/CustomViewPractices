@@ -25,10 +25,6 @@
         android:padding="10dp"
         android:visibility="gone"/>
 
-    <com.lomo.demo.TickView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -54,5 +50,9 @@
         android:text="1"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="16sp"/>
+
+    <com.lomo.demo.TickView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
